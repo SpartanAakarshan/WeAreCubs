@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export function WhatIsCubsSection() {
@@ -25,8 +26,8 @@ export function WhatIsCubsSection() {
               future for Indian sports — one campus at a time.
             </p>
 
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg px-6 py-6">
-              Read More About Our Vision <ArrowRight className="ml-2 w-5 h-5" />
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg px-6 py-6">
+              <Link href="/about">Read More About Our Vision <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </div>
         </div>

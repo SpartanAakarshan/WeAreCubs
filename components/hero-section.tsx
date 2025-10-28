@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
 
 export function HeroSection() {
@@ -21,18 +22,11 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
-            >
-              🎓 Join as a College
+            <Button size="lg" asChild className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold">
+              <Link href="https://forms.gle/h3DM7LRpgo8epzMA6" target="_blank" rel="noopener noreferrer">🎓 Join as a College</Link>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
-            >
-              🤝 Partner with Us
+            <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent">
+              <Link href="https://forms.gle/ERnZcC2yohc8D59n9" target="_blank" rel="noopener noreferrer">🤝 Partner with Us</Link>
             </Button>
           </div>
 

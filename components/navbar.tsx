@@ -19,7 +19,7 @@ export function Navbar() {
             <nav className="hidden md:flex items-center gap-6">
               <a href="/about" className="text-white/90 hover:text-white font-medium">About</a>
               <a
-                href="#join"
+                href="/join"
                 className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-bold hover:bg-primary/90"
               >
                 Join Now
@@ -62,7 +62,7 @@ export function Navbar() {
                 About
               </a>
               <a
-                href="#join"
+                href="/join"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center bg-primary text-primary-foreground px-5 py-3 rounded-md font-bold w-max"
               >
