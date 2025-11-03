@@ -1,23 +1,34 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [atTop, setAtTop] = useState(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setAtTop(window.scrollY <= 10)
+    }
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <>
-      {/* Sticky top bar */}
-      <div className="sticky top-0 z-30">
-        <div className="backdrop-blur-sm bg-black/40">
+      {/* Fixed top bar over hero */}
+      <div className="fixed top-0 left-0 right-0 z-30">
+        <div className={`${atTop ? "bg-transparent backdrop-blur-0" : "backdrop-blur-sm bg-black/40"} transition-colors duration-300`}>
           <div className="container mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="flex items-center gap-3">
-              <img src="/logo-cubs.jpeg" alt="CUBS" className="h-20 w-auto" />
+              <img src="/logo-cubs.jpg" alt="CUBS" className="h-20 w-auto" />
             </a>
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-6">
               <a href="/about" className="text-white/90 hover:text-white font-medium">About</a>
+              <a href="/contact" className="text-white/90 hover:text-white font-medium">Contact</a>
               <a
                 href="/join"
                 className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-bold hover:bg-primary/90"
@@ -60,6 +71,13 @@ export function Navbar() {
                 className="text-white text-2xl font-semibold"
               >
                 About
+              </a>
+              <a
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="text-white text-2xl font-semibold"
+              >
+                Contact
               </a>
               <a
                 href="/join"

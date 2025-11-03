@@ -1,12 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Bebas_Neue } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400", variable: "--font-bebas" })
 
 export const metadata: Metadata = {
   title: "CUBS - Transforming College Sports in India",
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${bebas.variable} font-sans antialiased`}>
         <Navbar />
         {children}
         <Analytics />

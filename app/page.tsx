@@ -5,13 +5,14 @@ import { WhyIndiaSection } from "@/components/why-india-section"
 import { ApproachSection } from "@/components/approach-section"
 import { ImpactSection } from "@/components/impact-section"
 import { SeasonTeaserSection } from "@/components/season-teaser-section"
-import { SocialProofSection } from "@/components/social-proof-section"
+// import { SocialProofSection } from "@/components/social-proof-section"
 import { GetInvolvedSection } from "@/components/get-involved-section"
 import { Footer } from "@/components/footer"
+import { BuiltDifferentSection } from "@/components/built-different-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black">
       <HeroSection />
       {/* <ProblemSection /> */}
       <WhatIsCubsSection />
@@ -19,7 +20,8 @@ export default function Home() {
       <ApproachSection />
       <ImpactSection />
       <SeasonTeaserSection />
-      <SocialProofSection />
+      <BuiltDifferentSection />
+      {/* <SocialProofSection /> */}
       <GetInvolvedSection />
       <Footer />
     </main>
