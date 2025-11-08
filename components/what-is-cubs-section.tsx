@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { Anton } from "next/font/google"
+
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 
 export function WhatIsCubsSection() {
   return (

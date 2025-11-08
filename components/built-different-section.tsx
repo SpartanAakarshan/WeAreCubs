@@ -12,6 +12,7 @@ const points: BuiltPoint[] = [
   { title: "Pathway To Elite", description: "Because college shouldn’t be the finish line." },
   { title: "Community Building", description: "Team spirit doesn’t end with the final whistle." },
   { title: "Gender Inclusive", description: "It’s 2025. Equality isn’t a feature — it’s standard." },
+  {title: "Content & Storytelling", description: "The games end — but the stories live on."}
 ]
 
 export function BuiltDifferentSection() {

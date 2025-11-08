@@ -1,74 +1,85 @@
-import { TrendingUp, Users, DollarSign, Compass, Video } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Anton } from "next/font/google"
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 
 const reasons = [
   {
-    icon: TrendingUp,
-    title: "India’s youth are ready — they just need the platform.",
-    // description: "India's demographic dividend",
+    title: "Growing Youth Demographic",
+    stats: ["365Mn+ Millennials", "390Mn+ Gen Z", "300Mn+ Gen A"],
   },
   {
-    icon: Users,
-    title: "Millions of students, zero structured system.",
-    // description: "Massive potential waiting to be unlocked",
+    title: "Large Student Base –",
+    stats: ["40Mn+ students", "56K+ institutions"],
   },
   {
-    icon: DollarSign,
-    title: "The sports market is booming, but the foundation is missing.",
-    // description: "Growing sponsorships and funding",
+    title: "Future Pipeline",
+    stats: ["92Mn+ students (2035)"],
   },
   {
-    icon: Compass,
-    title: "Sponsors & media are looking for stories worth backing.",
-    // description: "No organized college-level framework",
+    title: "Expanding Sports Market",
+    stats: ["$52Bn industry projected to reach $130Bn by 2030"],
   },
   {
-    icon: Video,
-    title: "And we’re here to give them one.",
-    // description: "Media and streaming revolution",
+    title: "Sponsorship & Media Growth",
+    stats: ["$2Bn+ in sports sponsorships & media spends"],
+  },
+  {
+    title: "Gen Z Consumer Power",
+    stats: ["$860Bn in spending today, expected to hit $2Tn by 2035"],
   },
 ]
 
 export function WhyIndiaSection() {
   return (
-    <section className="py-20 md:py-32 bg-black">
+    <section className="py-20 md:py-32 bg-black" id="why-india">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black text-balance text-white">
+          <div className="space-y-6">
+            <div className="inline-block text-left">
+              <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
+                OUR <span className="text-primary">OBJECTIVE</span>
+              </h2>
+            </div>
+            {/* <h2 className="text-4xl md:text-6xl font-black text-balance text-white">
             Why <span className="text-primary">India</span> needs CUBS?
-            </h2>
-            <p className="text-2xl md:text-2xl font-black text-balance text-white">
-            College Sports Matter <span className="text-primary">Now More Than Ever</span>
+            </h2> */}
+                 {/* <p className="text-2xl md:text-2xl font-black text-balance text-white">
+            Why <span className="text-primary">India</span> needs CUBS?College Sports Matter <span className="text-primary">Now More Than Ever</span>
+            </p> */}
+            <p className={`${anton.className} text-2xl md:text-2xl font-black text-balance text-white uppercase`}>
+              WHY <span className="text-primary">INDIA</span> NEEDS CUBS?
             </p>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="grid gap-10 md:grid-cols-2 max-w-4xl mx-auto">
             {reasons.map((reason, index) => {
-              const Icon = reason.icon
               return (
-                <div
-                  key={index}
-                  className="bg-black border-2 border-white/20 rounded-lg p-8 space-y-4 hover:border-primary transition-colors w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-sm"
-                >
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
+                <div key={index} className="flex items-start gap-4">
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 inline-block h-0 w-0 border-y-[10px] border-y-transparent border-l-[16px] border-l-primary"
+                  />
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-white">{reason.title}</h3>
+                    <ul className="space-y-1">
+                      {reason.stats.map((stat, statIndex) => (
+                        <li key={statIndex} className="text-white/70 leading-relaxed font-medium">
+                          {stat}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="text-xl font-bold text-white">{reason.title}</h3>
-                  {/* <p className="text-white/70 leading-relaxed">{reason.description}</p> */}
                 </div>
               )
             })}
           </div>
 
-          <div className="text-center pt-8">
+          {/* <div className="text-center pt-8">
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg px-8 py-6"
             >
               🔥 Join the Movement
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

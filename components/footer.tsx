@@ -6,7 +6,10 @@ export function Footer() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="grid md:grid-cols-4 gap-12 max-w-6xl mx-auto">
           <div className="space-y-4">
-            <h3 className="text-2xl font-black">CUBS</h3>
+            <div className="flex items-center gap-3">
+              <img src="/new-cubs-logo.svg" alt="CUBS" className="h-8 w-auto" />
+              <h3 className="text-2xl font-black">CUBS</h3>
+            </div>
             <p className="text-secondary-foreground/80 leading-relaxed">
               Building the future of college sports in India.
             </p>
@@ -16,22 +19,17 @@ export function Footer() {
             <h4 className="font-bold text-lg">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <a href="/#about" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   What is CUBS
                 </a>
               </li>
               <li>
-                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <a href="/#impact" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   Impact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                <a href="/contact" className="text-secondary-foreground/80 hover:text-primary transition-colors">
                   Contact
                 </a>
               </li>
@@ -58,27 +56,27 @@ export function Footer() {
             <h4 className="font-bold text-lg">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/cubs.india?igsh=a214NjZkdG8wZm9j&utm_source=qr"
                 className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:scale-110 transition-transform"
               >
                 <Instagram className="w-5 h-5 text-primary-foreground" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:scale-110 transition-transform"
               >
                 <Linkedin className="w-5 h-5 text-primary-foreground" />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center hover:scale-110 transition-transform"
               >
                 <Youtube className="w-5 h-5 text-primary-foreground" />
-              </a>
+              </a> */}
             </div>
             <div className="flex items-center gap-2 text-secondary-foreground/80">
               <Mail className="w-4 h-4" />
-              <span className="text-sm">contact@cubs.in</span>
+              <span className="text-sm">Info@brahmasports.com</span>
             </div>
           </div>
         </div>

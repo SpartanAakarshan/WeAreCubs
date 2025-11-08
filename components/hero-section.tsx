@@ -2,31 +2,93 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { Anton } from "next/font/google"
+
+const anton = Anton({ weight: "400", subsets: ["latin"] })
+
+const heroContent = [
+  {
+    title: "Transforming College Sports.",
+    titleHighlight: "Empowering Campuses.",
+    description: "India's first structured multi-sport ecosystem for colleges — where athletes compete, colleges grow, and sports culture thrives.",
+  },
+  {
+    title: "Building the Ecosystem.",
+    titleHighlight: "Uniting Campuses Nationwide.",
+    description: "CUBS brings colleges together through sport — creating a connected, scalable system where competition fuels community and growth.",
+  },
+  {
+    title: "Beyond Competition.",
+    titleHighlight: "Fostering Sports Culture.",
+    description: "More than a league — CUBS inspires participation, pride, and purpose, turning every campus into a hub of sporting energy.",
+  },
+  {
+    title: "Structuring College Sports.",
+    titleHighlight: "Shaping Futures.",
+    description: "CUBS provides a platform for student-athletes to keep competing, growing, and leading — where passion meets purpose through organized sport.",
+  },
+  {
+    title: "Divided by Campuses.",
+    titleHighlight: "United by CUBS.",
+    description: "CUBS bridges the gaps between universities — creating one national stage where students compete, connect, and celebrate the true spirit of sport.",
+  },
+]
 
 export function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroContent.length)
+    }, 6000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const currentContent = heroContent[currentIndex]
+
   return (
     <section className="relative min-h-screen flex items-end bg-secondary text-secondary-foreground overflow-hidden">
-      {/* Dynamic background slideshow */}
-      <HeroBackgroundSlideshow />
+      {/* Video background */}
+      <HeroVideoBackground />
 
       <div className="container mx-auto relative z-10 px-4 pb-16 md:pb-24">
         <div className="max-w-5xl space-y-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black tracking-tight leading-[0.95] text-balance text-white">
-            Transforming College Sports. <span className="text-primary">Empowering Campuses.</span>
-          </h1>
+          <div className="relative min-h-[120px] md:min-h-[180px] lg:min-h-[240px]">
+            <h1
+              key={currentIndex}
+              className={`${anton.className} absolute inset-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] tracking-tight leading-[0.95] text-balance text-white uppercase animate-fade-in`}
+            >
+              {currentContent.title}{" "}
+              <span className="text-primary">{currentContent.titleHighlight}</span>
+            </h1>
+          </div>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed">
-            India's first structured multi-sport ecosystem for colleges — where athletes compete, colleges grow, and
-            sports culture thrives.
-          </p>
+          <div className="relative min-h-[60px] md:min-h-[80px]">
+            <p
+              key={`desc-${currentIndex}`}
+              className="absolute inset-0 text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed animate-fade-in"
+            >
+              {currentContent.description}
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
-            <Button size="lg" asChild className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold">
-              <Link href="https://forms.gle/h3DM7LRpgo8epzMA6" target="_blank" rel="noopener noreferrer">🎓 Join as a College</Link>
+            <Button
+              size="lg"
+              asChild
+              className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
+            >
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🎓 Join as a College
+              </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent">
-              <Link href="https://forms.gle/ERnZcC2yohc8D59n9" target="_blank" rel="noopener noreferrer">🤝 Partner with Us</Link>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">🤝 Partner with Us</Link>
             </Button>
           </div>
 
@@ -41,53 +103,29 @@ export function HeroSection() {
   )
 }
 
-function HeroBackgroundSlideshow() {
-  const images = useMemo(
-    () => [
-      "/new/1-5.webp",
-      "/new/4d196e21-811f-46b8-8049-f09714463623_rw_1920.jpg",
-      "/new/basketball-1485410_1280.jpg",
-      "/new/football-pitch-320100_1280.jpg",
-      "/new/istockphoto-467634080-612x612.jpg",
-      "/new/istockphoto-860880772-612x612.jpg",
-      "/new/man-7135324_1280.jpg",
-      "/new/man-7813108_1280.jpg",
-      "/new/pexels-expressivestanley-3148452.jpeg",
-      "/new/pexels-gonchifacello-1432039.jpeg",
-      "/new/pexels-vladvictoria-2202685.jpeg",
-      "/new/R2yLQWoSakuek40mREcw8607XWe6eoqH1TXS2GHz.webp",
-      "/new/sky-1284256_1280.jpg",
-      "/new/soccer-1457988_1280.jpg",
-      "/new/table-tennis-1208377_1280.jpg",
-      "/new/tennis-614183_1280.jpg",
-      "/new/volleyball-520093_1280.jpg",
-      "/new/woman-5605529_1280.jpg",
-    ],
-    [],
-  )
-
-  const [index, setIndex] = useState(0)
+function HeroVideoBackground() {
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length)
-    }, 6000)
-    return () => clearInterval(id)
-  }, [images.length])
-
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Autoplay may be blocked, but browser will handle it
+      })
+    }
+  }, [])
+  
   return (
     <div className="absolute inset-0">
-      {images.map((src, i) => (
-        <div
-          key={src}
-          className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${i === index ? "opacity-100" : "opacity-0"}`}
-          style={{
-            backgroundImage: `url('${src}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-      ))}
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/Sports compilation- website - Made with Clipchamp.mp4" type="video/mp4" />
+      </video>
       {/* Dark gradient for readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
     </div>

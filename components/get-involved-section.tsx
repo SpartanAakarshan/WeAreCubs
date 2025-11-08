@@ -9,7 +9,7 @@ export function GetInvolvedSection() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/college-sports-action-moment-.jpg')",
+            backgroundImage: "url('/cubs')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -36,7 +36,7 @@ export function GetInvolvedSection() {
                 href="mailto:contact@cubs.in"
                 className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-4 rounded-md font-bold hover:bg-primary/90"
               >
-                Email us: contact@cubs.in
+                Email us: Info@brahmasports.com
               </a>
             </div>
           </div>

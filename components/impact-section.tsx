@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { GraduationCap, Building2, Flag } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Anton } from "next/font/google"
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 
 const impacts = [
   {
@@ -16,7 +18,7 @@ const impacts = [
       "Fosters Teamwork & Leadership",
       "Scholarship & Financial Aid Opportunities",
       "Scouting & Exposure for Athletes",
-      "Talent Identification for Non-Athletes"],
+      "Talent Identification for Non-Athletes", "Strengthened Campus Identity & Belonging"],
   },
   {
     id: "colleges",
@@ -43,7 +45,7 @@ const impacts = [
     "Generating Employment in the Sports Industry",
     "Promoting a Healthier Population",
     "Driving Economic Growth",
-    "Creating a Pathway for Future Athletes",
+    // "Creating a Pathway for Future Athletes",
     "Developing World-Class Sports Infrastructure",
     "Positioning India as a Competitive Sporting Nation"],
   },
@@ -56,14 +58,14 @@ export function ImpactSection() {
   const Icon = activeImpact.icon
 
   return (
-    <section className="py-20 md:py-32 bg-black">
+    <section className="py-20 md:py-32 bg-black" id="impact">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black text-balance text-white">
+            <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
               The <span className="text-primary">Impact</span>
             </h2>
-            <p className="text-xl md:text-2xl text-white/70">Results That Matter</p>
+            <p className={`${anton.className} text-xl md:text-2xl text-white/70 uppercase`}>RESULTS THAT MATTER</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -90,9 +92,9 @@ export function ImpactSection() {
 
           <div className="bg-black text-white rounded-lg p-12 border-4 border-primary">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
+              {/* <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
                 <Icon className="w-8 h-8 text-primary-foreground" />
-              </div>
+              </div> */}
               <h3 className="text-3xl md:text-4xl font-black text-white">{activeImpact.title}</h3>
             </div>
 
@@ -109,15 +111,15 @@ export function ImpactSection() {
           </div>
 
           <div className="text-center pt-8">
-            <p className="text-2xl md:text-3xl font-black mb-6 text-white">
+            <p className={`${anton.className} text-2xl md:text-3xl font-black mb-6 text-white uppercase`}>
               When campuses grow, <span className="text-primary">the nation wins.</span>
             </p>
-            <Button
+            {/* <Button
               variant="outline"
               className="border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
             >
               See the Full Impact →
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
