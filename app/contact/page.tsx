@@ -10,7 +10,7 @@ export default function ContactPage() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url('/about-us-cover-1.jpg')",
+              backgroundImage: "url('/contact us.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -39,21 +39,21 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-wide text-white/60">Email</p>
-                    <p className="text-xl font-bold">contact@cubs.in</p>
+                    <p className="text-xl font-bold">Info@brahmasports.com</p>
                   </div>
                 </div>
                 <p className="text-white/80">
-                  Reach out to the CUBS team — we typically respond within 2–3 business days.
+                  Reach out to the CUBS team — we typically respond within 1–2 business days.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <a href="mailto:contact@cubs.in" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md font-bold hover:bg-primary/90">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md font-bold hover:bg-primary/90">
                     Write to us <ArrowRight className="w-4 h-4" />
                   </a>
-                  <a href="/about" className="inline-flex items-center gap-2 border border-white/20 text-white px-5 py-3 rounded-md font-semibold hover:border-primary">
-                    Know more <ArrowRight className="w-4 h-4" />
-                  </a>
+                  <p className="inline-flex items-center gap-2 border border-white/20 text-white px-5 py-3 rounded-md font-semibold">
+                  Info@brahmasports.com
+                  </p>
                 </div>
-                <div className="pt-4 grid grid-cols-3 gap-4">
+                {/* <div className="pt-4 grid grid-cols-3 gap-4">
                   <div className="rounded-lg border border-white/10 p-4 text-center">
                     <p className="text-2xl font-black">24h</p>
                     <p className="text-xs text-white/60">Avg. reply</p>
@@ -66,12 +66,12 @@ export default function ContactPage() {
                     <p className="text-2xl font-black">100+</p>
                     <p className="text-xs text-white/60">Colleges</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Secondary: social + other */}
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               <div className="rounded-2xl border border-white/15 bg-gradient-to-b from-white/5 to-white/[0.03] p-8">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

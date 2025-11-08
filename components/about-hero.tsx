@@ -9,16 +9,16 @@ export function AboutHero() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/about-us-cover-1.jpg')",
+            backgroundImage: "url('/cubs-football.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="container mx-auto relative z-10 px-4 py-16 md:py-24">
-        <div className="max-w-4xl space-y-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+      <div className="container mx-auto relative z-10 px-4 pt-28 pb-16 md:pt-40 md:pb-24">
+        <div className="max-w-4xl space-y-8  drop-shado  w-[0_4px_16px_rgba(0,0,0,0.6)]">
           <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight">
             About <span className="text-primary">CUBS</span>
           </h1>
