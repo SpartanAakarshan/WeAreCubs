@@ -124,7 +124,7 @@ function HeroVideoBackground() {
         loop
         playsInline
       >
-        <source src="/Sports compilation- website - Made with Clipchamp.mp4" type="video/mp4" />
+        <source src="/cubs-video.mp4" type="video/mp4" />
       </video>
       {/* Dark gradient for readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
