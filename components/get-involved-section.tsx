@@ -33,7 +33,7 @@ export function GetInvolvedSection() {
                 you're a campus shaping culture or a brand enabling opportunity, let's build this ecosystem together.
               </p>
               <a
-                href="mailto:contact@cubs.in"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
                 className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-4 rounded-md font-bold hover:bg-primary/90"
               >
                 Email us: Info@brahmasports.com

@@ -87,7 +87,7 @@ export function Navbar() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
                 className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-bold hover:bg-primary/90"
               >
-                Join Now
+                Know More
               </a>
             </nav>
             {/* Mobile hamburger */}

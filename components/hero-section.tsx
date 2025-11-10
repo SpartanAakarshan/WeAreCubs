@@ -53,31 +53,33 @@ export function HeroSection() {
       <HeroVideoBackground />
 
       <div className="container mx-auto relative z-10 px-4 pt-24 pb-12 md:pt-32 md:pb-20">
-        <div className="max-w-5xl space-y-8 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
-          <div className="relative min-h-[40px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[140px]">
-            <h1
-              key={currentIndex}
-              className={`${anton.className} absolute inset-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] tracking-tight leading-[0.95] text-balance text-white uppercase animate-fade-in`}
-            >
-              {currentContent.title}{" "}
-              <span className="text-primary">{currentContent.titleHighlight}</span>
-            </h1>
+        <div className="max-w-5xl flex flex-col gap-6 md:gap-8 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] min-h-[70vh] md:min-h-0">
+          <div className="flex-1 space-y-6">
+            <div className="relative min-h-[60px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[140px]">
+              <h1
+                key={currentIndex}
+                className={`${anton.className} absolute inset-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] tracking-tight leading-[0.95] text-balance text-white uppercase animate-fade-in`}
+              >
+                {currentContent.title}{" "}
+                <span className="text-primary">{currentContent.titleHighlight}</span>
+              </h1>
+            </div>
+
+            <div className="relative min-h-[120px] sm:min-h-[90px] md:min-h-[110px]">
+              <p
+                key={`desc-${currentIndex}`}
+                className="absolute inset-0 text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed animate-fade-in"
+              >
+                {currentContent.description}
+              </p>
+            </div>
           </div>
 
-          <div className="relative min-h-[80px] sm:min-h-[90px] md:min-h-[110px]">
-            <p
-              key={`desc-${currentIndex}`}
-              className="absolute inset-0 text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed animate-fade-in"
-            >
-              {currentContent.description}
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 items-center pt-4 sm:pt-6">
+          <div className="flex w-full flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-6 pt-4 sm:pt-6 mt-8 sm:mt-0 md:mt-0">
             <Button
               size="lg"
               asChild
-              className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
+              className="flex-1 min-w-[180px] text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
             >
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
@@ -91,7 +93,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               asChild
-              className="w-full sm:w-auto text-lg px-8 py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
+              className="flex-1 min-w-[180px] text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
             >
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
@@ -103,11 +105,11 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="pt-2 sm:pt-4">
+          {/* <div className="pt-2 sm:pt-4">
             <Button variant="ghost" className="w-full sm:w-auto text-secondary-foreground/60 hover:text-secondary-foreground">
               ▶ Watch Intro Video <span className="ml-2 text-xs">(COMING SOON)</span>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

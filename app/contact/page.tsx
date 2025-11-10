@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-md font-bold hover:bg-primary/90">
-                    Write to us <ArrowRight className="w-4 h-4" />
+                    Know More <ArrowRight className="w-4 h-4" />
                   </a>
                   <p className="inline-flex items-center gap-2 border border-white/20 text-white px-5 py-3 rounded-md font-semibold">
                   Info@brahmasports.com

@@ -2,6 +2,9 @@ export type BuiltPoint = {
   title: string
   description: string
 }
+import { Anton } from "next/font/google"
+
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 
 const points: BuiltPoint[] = [
   { title: "Multi Sports League", description: "Because India plays more than just one game." },
@@ -18,20 +21,25 @@ const points: BuiltPoint[] = [
 export function BuiltDifferentSection() {
   return (
     <section className="py-20 md:py-32 bg-black">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto space-y-12">
+      <div className="w-screen">
+        <div className="max-w-6xl mx-auto space-y-12 px-4">
           <div className="text-center space-y-2">
-            <h2 className="text-4xl md:text-6xl font-black text-balance text-white">Built Different</h2>
+            <h2 className={`${anton.className} text-3xl sm:text-5xl md:text-6xl font-black text-balance text-white`}>
+              Built <span className="text-primary">Different</span>
+            </h2>
             {/* <p className="text-white/70">The pillars that set CUBS apart</p> */}
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6">
             {points.map((item, idx) => (
               <div key={idx} className="group">
-                <div className="bg-black text-white rounded-lg p-8 h-full border-4 border-white/20 hover:border-primary transition-all hover:scale-[1.02]">
-                  <h3 className="text-2xl font-black text-center">{item.title}</h3>
-                  <div className="overflow-hidden max-h-0 opacity-0 translate-y-2 group-hover:max-h-40 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out mt-3">
-                    <p className="text-white/70 text-center">{item.description}</p>
+                <div className="bg-black text-white rounded-lg p-4 sm:p-8 h-full border-2 sm:border-4 border-white/20 hover:border-primary transition-all hover:scale-[1.02]">
+                  <h3 className="text-base sm:text-2xl md:text-3xl font-black text-center leading-tight">{item.title}</h3>
+                  <div className="mt-2 block lg:hidden">
+                    <p className="text-xs sm:text-sm md:text-base text-white/70 text-center leading-relaxed">{item.description}</p>
+                  </div>
+                  <div className="overflow-hidden max-h-0 opacity-0 translate-y-2 hidden lg:block group-hover:max-h-40 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out mt-3">
+                    <p className="text-white/70 text-center text-lg">{item.description}</p>
                   </div>
                 </div>
               </div>

@@ -14,16 +14,30 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black">
       <HeroSection />
+      <Divider />
       {/* <ProblemSection /> */}
       <WhatIsCubsSection />
-      <WhyIndiaSection />
-      <ApproachSection />
-      <ImpactSection />
-      <SeasonTeaserSection />
+      <Divider />
       <BuiltDifferentSection />
+      <Divider />
+      <ImpactSection />
+    
+      <Divider />
+      <WhyIndiaSection />
+
+      <Divider />
+      <SeasonTeaserSection />
+      <Divider />
+      <ApproachSection />
       {/* <SocialProofSection /> */}
+      <Divider />
       <GetInvolvedSection />
+      <Divider />
       <Footer />
     </main>
   )
+}
+
+function Divider() {
+  return <div className="border-t w-full" style={{ borderColor: "#ffa739" }} />
 }

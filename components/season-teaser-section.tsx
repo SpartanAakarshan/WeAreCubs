@@ -19,7 +19,7 @@ export function SeasonTeaserSection() {
 
           <div className="pt-3">
             <div className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-black text-lg">
-              Stay Tuned →
+              Stay Tuned
             </div>
           </div>
         </div>
