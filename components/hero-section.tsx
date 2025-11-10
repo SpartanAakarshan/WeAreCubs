@@ -48,13 +48,13 @@ export function HeroSection() {
   const currentContent = heroContent[currentIndex]
 
   return (
-    <section className="relative min-h-screen flex items-end bg-secondary text-secondary-foreground overflow-hidden">
+    <section className="relative min-h-screen flex items-center md:items-end bg-secondary text-secondary-foreground overflow-hidden">
       {/* Video background */}
       <HeroVideoBackground />
 
-      <div className="container mx-auto relative z-10 px-4 pb-16 md:pb-24">
-        <div className="max-w-5xl space-y-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
-          <div className="relative min-h-[120px] md:min-h-[180px] lg:min-h-[240px]">
+      <div className="container mx-auto relative z-10 px-4 pt-24 pb-12 md:pt-32 md:pb-20">
+        <div className="max-w-5xl space-y-8 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+          <div className="relative min-h-[40px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[140px]">
             <h1
               key={currentIndex}
               className={`${anton.className} absolute inset-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] tracking-tight leading-[0.95] text-balance text-white uppercase animate-fade-in`}
@@ -64,7 +64,7 @@ export function HeroSection() {
             </h1>
           </div>
 
-          <div className="relative min-h-[60px] md:min-h-[80px]">
+          <div className="relative min-h-[80px] sm:min-h-[90px] md:min-h-[110px]">
             <p
               key={`desc-${currentIndex}`}
               className="absolute inset-0 text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed animate-fade-in"
@@ -73,11 +73,11 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 items-center pt-4 sm:pt-6">
             <Button
               size="lg"
               asChild
-              className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
+              className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
             >
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
@@ -87,13 +87,24 @@ export function HeroSection() {
                 🎓 Join as a College
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent">
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">🤝 Partner with Us</Link>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="w-full sm:w-auto text-lg px-8 py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
+            >
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🤝 Partner with Us
+              </Link>
             </Button>
           </div>
 
-          <div className="pt-4">
-            <Button variant="ghost" className="text-secondary-foreground/60 hover:text-secondary-foreground">
+          <div className="pt-2 sm:pt-4">
+            <Button variant="ghost" className="w-full sm:w-auto text-secondary-foreground/60 hover:text-secondary-foreground">
               ▶ Watch Intro Video <span className="ml-2 text-xs">(COMING SOON)</span>
             </Button>
           </div>
