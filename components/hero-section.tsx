@@ -53,8 +53,8 @@ export function HeroSection() {
       <HeroVideoBackground />
 
       <div className="container mx-auto relative z-10 px-4 pt-24 pb-12 md:pt-32 md:pb-20">
-        <div className="max-w-5xl flex flex-col gap-6 md:gap-8 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] min-h-[70vh] md:min-h-0">
-          <div className="flex-1 space-y-6">
+        <div className="max-w-5xl flex flex-col gap-6 md:gap-8 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] min-h-[70vh] md:min-h-0 justify-between">
+          <div className="flex-1 space-y-6 mt-auto md:mt-0 flex flex-col justify-end">
             <div className="relative min-h-[60px] sm:min-h-[160px] md:min-h-[200px] lg:min-h-[140px]">
               <h1
                 key={currentIndex}
@@ -65,10 +65,10 @@ export function HeroSection() {
               </h1>
             </div>
 
-            <div className="relative min-h-[120px] sm:min-h-[90px] md:min-h-[110px]">
+            <div className="relative min-h-[120px] sm:min-h-[90px] md:min-h-[110px] flex items-end">
               <p
                 key={`desc-${currentIndex}`}
-                className="absolute inset-0 text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed animate-fade-in"
+                className="absolute inset-0 text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl text-pretty leading-relaxed animate-fade-in flex items-end"
               >
                 {currentContent.description}
               </p>
