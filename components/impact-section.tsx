@@ -68,7 +68,7 @@ export function ImpactSection() {
             {/* <p className={`${anton.className} text-base sm:text-lg md:text-2xl text-white/70 uppercase`}>RESULTS THAT MATTER</p> */}
           </div>
 
-          <div className="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-3 md:gap-4 overflow-x-auto pb-2">
+          <div className="flex flex-nowrap md:flex-wrap justify-center gap-3 md:gap-4 overflow-x-auto pb-2">
             {impacts.map((impact) => {
               const TabIcon = impact.icon
               return (
@@ -98,11 +98,11 @@ export function ImpactSection() {
               {/* <h3 className="text-3xl md:text-4xl font-black text-white">{activeImpact.title}</h3> */}
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 justify-items-center">
               {activeImpact.items.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-black text-white rounded-lg p-3 sm:p-4 md:p-6 text-center font-semibold sm:font-bold text-xs sm:text-base md:text-lg border border-white/20 hover:border-primary transition-colors"
+                  className="bg-black text-white rounded-lg p-3 sm:p-4 md:p-6 text-center font-semibold sm:font-bold text-xs sm:text-base md:text-lg border border-white/20 hover:border-primary transition-colors w-full"
                 >
                   {item}
                 </div>
