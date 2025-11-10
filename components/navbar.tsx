@@ -154,7 +154,7 @@ export function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center bg-primary text-primary-foreground px-5 py-3 rounded-md font-bold w-max"
               >
-                Join Now
+                Know More
               </a>
             </div>
           </div>
