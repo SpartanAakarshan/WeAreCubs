@@ -13,13 +13,15 @@ export function SeasonTeaserSection() {
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-balance text-white">SEASON 1</h2>
           </div>
 
-          <p className="text-xl md:text-2xl font-bold text-white/90 text-balance">
+          {/* <p className="text-xl md:text-2xl font-bold text-white/90 text-balance">
             Because India plays more than just one game.
-          </p>
+          </p> */}
 
           <div className="pt-3">
             <div className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-black text-lg">
-              Stay Tuned
+              <a href="https://www.instagram.com/cubs.india?igsh=a214NjZkdG8wZm9j&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                Stay Tuned
+              </a>
             </div>
           </div>
         </div>

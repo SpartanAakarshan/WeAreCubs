@@ -62,17 +62,21 @@ export function Navbar() {
       <div className="fixed top-0 left-0 right-0 z-30">
         <div className={`${atTop ? "bg-transparent backdrop-blur-0" : "backdrop-blur-sm bg-black/40"} transition-colors duration-300`}>
           <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-3">
+            <a href="/" className="flex items-end gap-3">
               <img src="/new-cubs-logo.svg" alt="CUBS" className="h-20 w-auto" />
+              <span className="text-white font-bold text-xs md:text-sm lg:text-base leading-tight">
+                College &amp; Universities <br className="hidden lg:block" /> Building Sports
+              </span>
             </a>
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-6">
+            <a href="/about" className="text-white/90 hover:text-white font-medium">About</a>
               <button
                 onClick={() => handleScrollToSection("why-india")}
                 className="text-white/90 hover:text-white font-medium cursor-pointer"
                 type="button"
               >
-                Why
+                Why CUBS?
               </button>
               <button
                 onClick={() => handleScrollToSection("impact")}
@@ -81,14 +85,7 @@ export function Navbar() {
               >
                 Impact
               </button>
-              <a href="/about" className="text-white/90 hover:text-white font-medium">About</a>
               <a href="/contact" className="text-white/90 hover:text-white font-medium">Contact</a>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
-                className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-bold hover:bg-primary/90"
-              >
-                Know More
-              </a>
             </nav>
             {/* Mobile hamburger */}
             <button
@@ -107,8 +104,11 @@ export function Navbar() {
         <div className="fixed inset-0 z-40 bg-black">
           <div className="container mx-auto h-full px-4 py-4 flex flex-col">
             <div className="flex items-center justify-between">
-              <a href="/" className="flex items-center gap-3">
-                <img src="/placeholder-logo.png" alt="CUBS" className="h-10 w-auto" />
+              <a href="/" className="flex items-end gap-3">
+                <img src="/new-cubs-logo.svg" alt="CUBS" className="h-20 w-auto" />
+                <span className="text-white font-bold text-xs md:text-sm lg:text-base leading-tight">
+                  College &amp; Universities <br className="hidden lg:block" /> Building Sports
+                </span>
               </a>
               <button
                 aria-label="Close menu"
@@ -119,12 +119,19 @@ export function Navbar() {
               </button>
             </div>
             <div className="mt-12 flex-1 flex flex-col gap-6">
+            <a
+                href="/about"
+                onClick={() => setMobileOpen(false)}
+                className="text-white text-2xl font-semibold"
+              >
+                About
+              </a>
               <button
                 onClick={() => handleScrollToSection("why-india")}
                 className="text-white text-2xl font-semibold text-left cursor-pointer"
                 type="button"
               >
-                Why
+                Why CUBS?
               </button>
               <button
                 onClick={() => handleScrollToSection("impact")}
@@ -133,13 +140,7 @@ export function Navbar() {
               >
                 Impact
               </button>
-              <a
-                href="/about"
-                onClick={() => setMobileOpen(false)}
-                className="text-white text-2xl font-semibold"
-              >
-                About
-              </a>
+            
               <a
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
@@ -147,7 +148,7 @@ export function Navbar() {
               >
                 Contact
               </a>
-              <a
+              {/* <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,7 +156,7 @@ export function Navbar() {
                 className="inline-flex items-center justify-center bg-primary text-primary-foreground px-5 py-3 rounded-md font-bold w-max"
               >
                 Know More
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

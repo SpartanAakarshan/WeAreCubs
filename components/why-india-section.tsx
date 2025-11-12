@@ -36,7 +36,7 @@ export function WhyIndiaSection() {
           <div className="space-y-6 text-center">
             <div className="inline-block text-left md:text-center">
               <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
-                OUR <span className="text-primary">OBJECTIVE</span>
+                WHY INDIA NEEDS <span className="text-primary">CUBS</span>
               </h2>
             </div>
             {/* <h2 className="text-4xl md:text-6xl font-black text-balance text-white">
@@ -46,7 +46,7 @@ export function WhyIndiaSection() {
             Why <span className="text-primary">India</span> needs CUBS?College Sports Matter <span className="text-primary">Now More Than Ever</span>
             </p> */}
             <p className={`${anton.className} text-2xl md:text-2xl font-black text-balance text-white uppercase`}>
-              What makes us <span className="text-primary">CUBS?</span>
+            <span className="text-primary">College sports</span> matters now more than ever
             </p>
           </div>
           <div className="grid gap-10 md:grid-cols-2 max-w-4xl mx-auto">

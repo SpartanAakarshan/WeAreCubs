@@ -24,14 +24,13 @@ export default function Home() {
     
       <Divider />
       <WhyIndiaSection />
-
-      <Divider />
-      <SeasonTeaserSection />
       <Divider />
       <ApproachSection />
       {/* <SocialProofSection /> */}
       <Divider />
       <GetInvolvedSection />
+      <Divider />
+      <SeasonTeaserSection />
       <Divider />
       <Footer />
     </main>

@@ -20,7 +20,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a href="/#about" className="text-secondary-foreground/80 hover:text-primary transition-colors">
-                  What is CUBS
+                  OUR STORY
                 </a>
               </li>
               <li>

@@ -8,7 +8,7 @@ const anton = Anton({ weight: "400", subsets: ["latin"] })
 
 const points: BuiltPoint[] = [
   { title: "Multi Sports League", description: "Because India plays more than just one game." },
-  { title: "Multi City League", description: "Talent doesn’t stop at metro borders." },
+  { title: "Multi City League", description: "Because talent doesn’t stop at metro borders." },
   { title: "Structured Tournaments", description: "That actually start on time (no kidding)." },
   { title: "Live Broadcast", description: "Every match deserves its moment in the spotlight." },
   { title: "Stats & Analytics", description: "Numbers don’t lie — they reveal legends in the making." },
@@ -25,9 +25,9 @@ export function BuiltDifferentSection() {
         <div className="max-w-6xl mx-auto space-y-12 px-4">
           <div className="text-center space-y-2">
             <h2 className={`${anton.className} text-3xl sm:text-5xl md:text-6xl font-black text-balance text-white`}>
-              Built <span className="text-primary">Different</span>
+              BUILT <span className="text-primary">DIFFERENT</span>
             </h2>
-            {/* <p className="text-white/70">The pillars that set CUBS apart</p> */}
+            <p className="text-white/70">What Makes CUBS, CUBS?</p>
           </div>
 
           <div className="grid grid-cols-3 gap-4 sm:gap-6">
