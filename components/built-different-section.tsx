@@ -20,7 +20,7 @@ const points: BuiltPoint[] = [
 
 export function BuiltDifferentSection() {
   return (
-    <section className="py-20 md:py-32 bg-black">
+    <section className="py-20 md:py-32 bg-black" id="built-different">
       <div className="w-screen">
         <div className="max-w-6xl mx-auto space-y-12 px-4">
           <div className="text-center space-y-2">

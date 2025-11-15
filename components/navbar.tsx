@@ -64,15 +64,15 @@ export function Navbar() {
           <div className="container mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="flex items-end gap-3">
               <img src="/new-cubs-logo.svg" alt="CUBS" className="h-20 w-auto" />
-              <span className="text-white font-bold text-xs md:text-sm lg:text-base leading-tight">
-                College &amp; Universities <br className="hidden lg:block" /> Building Sports
-              </span>
+              <div className="flex flex-col items-start text-white font-bold text-base leading-tight">
+                College &amp; Universities <br /> Building Sports
+              </div>
             </a>
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-6">
             <a href="/about" className="text-white/90 hover:text-white font-medium">About</a>
               <button
-                onClick={() => handleScrollToSection("why-india")}
+                onClick={() => handleScrollToSection("built-different")}
                 className="text-white/90 hover:text-white font-medium cursor-pointer"
                 type="button"
               >
@@ -106,9 +106,10 @@ export function Navbar() {
             <div className="flex items-center justify-between">
               <a href="/" className="flex items-end gap-3">
                 <img src="/new-cubs-logo.svg" alt="CUBS" className="h-20 w-auto" />
-                <span className="text-white font-bold text-xs md:text-sm lg:text-base leading-tight">
-                  College &amp; Universities <br className="hidden lg:block" /> Building Sports
-                </span>
+                <div className="flex flex-col items-start text-white font-bold text-base leading-tight">
+                  <span>College &amp; Universities</span>
+                  <span>Building Sports</span>
+                </div>
               </a>
               <button
                 aria-label="Close menu"
@@ -127,7 +128,7 @@ export function Navbar() {
                 About
               </a>
               <button
-                onClick={() => handleScrollToSection("why-india")}
+                onClick={() => handleScrollToSection("built-different")}
                 className="text-white text-2xl font-semibold text-left cursor-pointer"
                 type="button"
               >

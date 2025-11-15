@@ -34,9 +34,9 @@ export function GetInvolvedSection() {
               </p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
-                className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-4 rounded-md font-bold hover:bg-primary/90"
+                className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-4 rounded-md font-bold hover:bg-primary/90" target="_blank" rel="noopener noreferrer"
               >
-                Email us: Info@brahmasports.com
+                Know More
               </a>
             </div>
           </div>

@@ -75,8 +75,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="flex w-full flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-6 pt-4 sm:pt-6 mt-8 sm:mt-0 md:mt-0">
-            <Button
+          <div className="flex w-full items-center justify-start gap-4 sm:gap-6 pt-4 sm:pt-6 mt-8 sm:mt-0 md:mt-0">
+            {/* <Button
               size="lg"
               asChild
               className="flex-1 min-w-[180px] text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
@@ -88,19 +88,19 @@ export function HeroSection() {
               >
                 🎓 Join as a College
               </Link>
-            </Button>
+            </Button> */}
             <Button
               size="lg"
               variant="outline"
               asChild
-              className="flex-1 min-w-[180px] text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
+              className="w-auto text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 border-primary text-white hover:bg-primary hover:text-primary-foreground font-bold bg-transparent"
             >
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                🤝 Partner with Us
+                Know More
               </Link>
             </Button>
           </div>
