@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Handshake } from "lucide-react"
-
+import { Anton } from "next/font/google"
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 export function GetInvolvedSection() {
   return (
     <section className="relative py-12 md:py-28 bg-black text-white overflow-hidden">
@@ -20,7 +21,7 @@ export function GetInvolvedSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black text-balance text-white">
+            <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
               Let's Build the Future of College Sports — <span className="text-primary">Together.</span>
             </h2>
           </div>

@@ -21,7 +21,7 @@ export function WhatIsCubsSection() {
           </div>
 
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black text-balance text-white">
+            <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
               OUR<span className="text-primary"> STORY</span>
             </h2>
             <p className="text-xl md:text-2xl leading-relaxed text-white/90"> CUBS was born from a simple, stubborn idea — that Indian students deserve a real sporting platform, not just a dusty field and a one-day tournament. In a nation overflowing with talent, too many athletes are forced to choose between grades and games. CUBS changes that story. </p>

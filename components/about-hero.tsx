@@ -1,7 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-
+import { Anton } from "next/font/google"
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 export function AboutHero() {
   return (
     <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-secondary text-secondary-foreground">
@@ -19,7 +20,7 @@ export function AboutHero() {
 
       <div className="container mx-auto relative z-10 px-4 pt-28 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-4xl space-y-8  drop-shado  w-[0_4px_16px_rgba(0,0,0,0.6)]">
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight">
+          <h1 className={`${anton.className} text-4xl md:text-6xl font-black text-white tracking-tight uppercase`}>
             What is <span className="text-primary">CUBS</span>?
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-2xl">

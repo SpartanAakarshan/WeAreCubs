@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero */}
-      <section className="relative min-h-[45vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[75vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0"

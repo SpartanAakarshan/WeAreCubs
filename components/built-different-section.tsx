@@ -24,7 +24,7 @@ export function BuiltDifferentSection() {
       <div className="w-screen">
         <div className="max-w-6xl mx-auto space-y-12 px-4">
           <div className="text-center space-y-2">
-            <h2 className={`${anton.className} text-3xl sm:text-5xl md:text-6xl font-black text-balance text-white`}>
+            <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
               BUILT <span className="text-primary">DIFFERENT</span>
             </h2>
             <p className="text-white/70">What Makes CUBS, CUBS?</p>

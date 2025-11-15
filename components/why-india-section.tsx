@@ -45,8 +45,8 @@ export function WhyIndiaSection() {
                  {/* <p className="text-2xl md:text-2xl font-black text-balance text-white">
             Why <span className="text-primary">India</span> needs CUBS?College Sports Matter <span className="text-primary">Now More Than Ever</span>
             </p> */}
-            <p className={`${anton.className} text-2xl md:text-2xl font-black text-balance text-white uppercase`}>
-            <span className="text-primary">College sports</span> matters now more than ever
+            <p className="text-white/70">
+            <span>College sports</span> matters now more than ever
             </p>
           </div>
           <div className="grid gap-10 md:grid-cols-2 max-w-4xl mx-auto">

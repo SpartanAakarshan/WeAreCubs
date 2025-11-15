@@ -25,6 +25,7 @@ const heroContent = [
   },
   {
     title: "Structuring College Sports.",
+    
     titleHighlight: "Shaping Futures.",
     description: "CUBS provides a platform for student-athletes to keep competing, growing, and leading — where passion meets purpose through organized sport.",
   },
@@ -60,7 +61,8 @@ export function HeroSection() {
                 key={currentIndex}
                 className={`${anton.className} absolute inset-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] tracking-tight leading-[0.95] text-balance text-white uppercase animate-fade-in`}
               >
-                {currentContent.title}{" "}
+                {currentContent.title}
+                {currentIndex === 3 ? <br /> : " "}
                 <span className="text-primary">{currentContent.titleHighlight}</span>
               </h1>
             </div>

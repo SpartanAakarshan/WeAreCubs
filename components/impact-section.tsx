@@ -62,7 +62,7 @@ export function ImpactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto space-y-8 md:space-y-12">
           <div className="text-center space-y-4 md:space-y-6">
-            <h2 className={`${anton.className} text-3xl sm:text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
+            <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
               The <span className="text-primary">Impact</span>
             </h2>
             {/* <p className={`${anton.className} text-base sm:text-lg md:text-2xl text-white/70 uppercase`}>RESULTS THAT MATTER</p> */}
