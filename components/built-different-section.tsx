@@ -33,13 +33,13 @@ export function BuiltDifferentSection() {
           <div className="grid grid-cols-3 gap-4 sm:gap-6">
             {points.map((item, idx) => (
               <div key={idx} className="group">
-                <div className="bg-black text-white rounded-lg p-4 sm:p-8 h-full border-2 sm:border-4 border-white/20 hover:border-primary transition-all hover:scale-[1.02]">
-                  <h3 className="text-base sm:text-2xl md:text-3xl font-black text-center leading-tight">{item.title}</h3>
+                <div className="bg-black text-white rounded-lg p-4 sm:p-8 h-full border-2 sm:border-4 border-white/20 hover:border-primary transition-all hover:scale-[1.02] overflow-hidden">
+                  <h3 className="text-sm sm:text-xl md:text-2xl font-black text-center leading-tight break-keep tracking-tight">{item.title}</h3>
                   <div className="mt-2 block lg:hidden">
-                    <p className="text-xs sm:text-sm md:text-base text-white/70 text-center leading-relaxed">{item.description}</p>
+                    <p className="text-xs sm:text-sm md:text-base text-white/70 text-center leading-relaxed break-normal">{item.description}</p>
                   </div>
                   <div className="overflow-hidden max-h-0 opacity-0 translate-y-2 hidden lg:block group-hover:max-h-40 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out mt-3">
-                    <p className="text-white/70 text-center text-lg">{item.description}</p>
+                    <p className="text-white/70 text-center text-lg break-normal">{item.description}</p>
                   </div>
                 </div>
               </div>
