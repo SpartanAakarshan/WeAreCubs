@@ -5,23 +5,38 @@ import { WhyIndiaSection } from "@/components/why-india-section"
 import { ApproachSection } from "@/components/approach-section"
 import { ImpactSection } from "@/components/impact-section"
 import { SeasonTeaserSection } from "@/components/season-teaser-section"
-import { SocialProofSection } from "@/components/social-proof-section"
+// import { SocialProofSection } from "@/components/social-proof-section"
 import { GetInvolvedSection } from "@/components/get-involved-section"
 import { Footer } from "@/components/footer"
+import { BuiltDifferentSection } from "@/components/built-different-section"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black">
       <HeroSection />
+      <Divider />
       {/* <ProblemSection /> */}
       <WhatIsCubsSection />
-      <WhyIndiaSection />
-      <ApproachSection />
+      <Divider />
+      <BuiltDifferentSection />
+      <Divider />
       <ImpactSection />
-      <SeasonTeaserSection />
-      <SocialProofSection />
+    
+      <Divider />
+      <WhyIndiaSection />
+      <Divider />
+      <ApproachSection />
+      {/* <SocialProofSection /> */}
+      <Divider />
       <GetInvolvedSection />
+      <Divider />
+      <SeasonTeaserSection />
+      <Divider />
       <Footer />
     </main>
   )
+}
+
+function Divider() {
+  return <div className="border-t w-full" style={{ borderColor: "#ffa739" }} />
 }

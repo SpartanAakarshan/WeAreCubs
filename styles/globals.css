@@ -123,3 +123,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Global font helper for Bebas Neue via next/font variable */
+.font-bebas {
+  font-family: var(--font-bebas), sans-serif;
+}

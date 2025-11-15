@@ -1,48 +1,44 @@
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Handshake } from "lucide-react"
-
+import { Anton } from "next/font/google"
+const anton = Anton({ weight: "400", subsets: ["latin"] })
 export function GetInvolvedSection() {
   return (
-    <section className="py-20 md:py-32 bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <section className="relative py-12 md:py-28 bg-black text-white overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 opacity-25">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/cubs')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black text-balance">
+            <h2 className={`${anton.className} text-4xl md:text-6xl font-black text-balance text-white uppercase`}>
               Let's Build the Future of College Sports — <span className="text-primary">Together.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-background text-foreground rounded-lg p-10 space-y-6 border-4 border-primary/20 hover:border-primary transition-all">
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-3xl font-black">Colleges & Universities</h3>
-              <p className="text-xl leading-relaxed text-muted-foreground">
-                Join the CUBS movement. Compete. Create legacy.
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-black/80 backdrop-blur-sm text-white rounded-2xl p-10 space-y-6 border-4 border-white/20 hover:border-primary transition-all text-center">
+              <h3 className="text-3xl md:text-4xl font-black">Colleges, Universities, Brands & Partners</h3>
+              <p className="text-lg md:text-xl leading-relaxed text-white/80">
+                Join the CUBS movement to compete, create legacy, and power India's next big sports revolution. Whether
+                you're a campus shaping culture or a brand enabling opportunity, let's build this ecosystem together.
               </p>
-              <Button
-                size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-6"
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScLBoFTLTMNGLOhjSCE56JASRZ3S_JONjzsfukB5OZ3a3inQA/viewform?usp=dialog"
+                className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-4 rounded-md font-bold hover:bg-primary/90" target="_blank" rel="noopener noreferrer"
               >
-                Register Your College
-              </Button>
-            </div>
-
-            <div className="bg-background text-foreground rounded-lg p-10 space-y-6 border-4 border-primary/20 hover:border-primary transition-all">
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
-                <Handshake className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-3xl font-black">Brands & Partners</h3>
-              <p className="text-xl leading-relaxed text-muted-foreground">
-                Be part of India's next big sports revolution.
-              </p>
-              <Button
-                size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-6"
-              >
-                Partner With Us
-              </Button>
+                Know More
+              </a>
             </div>
           </div>
         </div>
