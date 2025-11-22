@@ -46,7 +46,7 @@ export function WhyIndiaSection() {
             Why <span className="text-primary">India</span> needs CUBS?College Sports Matter <span className="text-primary">Now More Than Ever</span>
             </p> */}
             <p className="text-white/70">
-            <span>COLLEGE SPORTS</span> MATTERS NOW MORE THAN EVER
+            COLLEGE SPORTS MATTERS NOW MORE THAN EVER
             </p>
           </div>
           <div className="grid gap-10 md:grid-cols-2 max-w-4xl mx-auto">
